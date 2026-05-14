@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TCRQMW9Z9D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TCRQMW9Z9D');
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de projetos de desenvolvimento front-end: e-commerce, dashboard, landing pages e muito mais.">
+    <title>Portfólio | Projetos de Ryan Sousa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">&lt;RS Codes/&gt;</a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="portfolio.html" class="active">Portfólio</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Meu Portfólio</h1>
+                <p>Alguns dos meus melhores trabalhos</p>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                </div>
+
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <div class="portfolio-card" data-category="web">
+                        <div class="card-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Dashboard Analytics</h3>
+                            <p>Dashboard interativo com gráficos dinâmicos e dados em tempo real.</p>
+                            <div class="card-tech">
+                                <span>React</span>
+                                <span>Chart.js</span>
+                                <span>API REST</span>
+                            </div>
+                            <div class="card-hover-info">
+                                <span><i class="fas fa-code"></i> 5.2k linhas</span>
+                                <span><i class="fas fa-calendar"></i> 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" data-category="ecommerce">
+                        <div class="card-image">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>TechStore</h3>
+                            <p>Loja virtual completa com carrinho, filtros e integração de pagamento.</p>
+                            <div class="card-tech">
+                                <span>Vue.js</span>
+                                <span>Vuex</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="card-hover-info">
+                                <span><i class="fas fa-shopping-cart"></i> +2k vendas</span>
+                                <span><i class="fas fa-calendar"></i> 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" data-category="landing">
+                        <div class="card-image">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Music Festival</h3>
+                            <p>Landing page responsiva para evento musical com contagem regressiva.</p>
+                            <div class="card-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="card-hover-info">
+                                <span><i class="fas fa-users"></i> 50k+ views</span>
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" data-category="web">
+                        <div class="card-image">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>TaskFlow</h3>
+                            <p>Aplicativo de gerenciamento de tarefas com drag-and-drop.</p>
+                            <div class="card-tech">
+                                <span>React</span>
+                                <span>DnD Kit</span>
+                                <span>LocalStorage</span>
+                            </div>
+                            <div class="card-hover-info">
+                                <span><i class="fas fa-check-circle"></i> +10k tarefas</span>
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" data-category="landing">
+                        <div class="card-image">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sabor & Arte</h3>
+                            <p>Site institucional para restaurante com menu interativo e reservas.</p>
+                            <div class="card-tech">
+                                <span>HTML5</span>
+                                <span>Tailwind</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="card-hover-info">
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" data-category="ecommerce">
+                        <div class="card-image">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Moda Express</h3>
+                            <p>E-commerce de moda com filtro avançado e carrinho persistente.</p>
+                            <div class="card-tech">
+                                <span>Next.js</span>
+                                <span>Tailwind</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="card-hover-info">
+                                <span><i class="fas fa-calendar"></i> 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>&lt;RS Codes/&gt;</h3>
+                    <p>Transformando ideias em experiências digitais memoráveis.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/Rsa-olimpio"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ryan-sousa-7a5516334?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/_ryans9?igsh=NmV2YW9lNHRuY3Vz"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ryan Sousa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
