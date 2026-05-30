@@ -24,7 +24,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--darker);
+background: linear-gradient(135deg, #000428, #004e92, #000428);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
     color: var(--light);
     line-height: 1.6;
     overflow-x: hidden;
@@ -1030,7 +1032,22 @@ footer {
 .service-card, .portfolio-card, .service-full-card, .info-item {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 .service-card, .portfolio-card, .service-full-card, .info-item {
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
+}
+
+/* BACKGROUND ANIMADO */
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
