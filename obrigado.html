@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem Enviada | Ryan Sousa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .thankyou-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .thankyou-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+        }
+        .thankyou-card i {
+            font-size: 80px;
+            color: #10b981;
+            margin-bottom: 20px;
+        }
+        .thankyou-card h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .thankyou-card p {
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+        .btn-voltar {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-voltar:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou-container">
+        <div class="thankyou-card">
+            <i class="fas fa-check-circle"></i>
+            <h1>Mensagem Enviada! ✅</h1>
+            <p>Obrigado pelo seu contato!<br>Responderei em até 24 horas.</p>
+            <a href="index.html" class="btn-voltar">
+                <i class="fas fa-arrow-left"></i>
+                Voltar para o site
+            </a>
+        </div>
+    </div>
+</body>
+</html>
