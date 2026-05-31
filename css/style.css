@@ -24,7 +24,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-background: linear-gradient(135deg, #000428, #004e92, #000428);
+    background: linear-gradient(135deg, #0a0a0a, #1a0b2e, #0a0a0a);
     background-size: 200% 200%;
     animation: gradientShift 8s ease infinite;
     color: var(--light);
