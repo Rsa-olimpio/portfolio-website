@@ -471,8 +471,41 @@ h1, h2, h3 {
     position: relative;
 }
 
+/* Brilho para portfolio-card */
+.portfolio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.portfolio-card:hover::before {
+    left: 100%;
+}
+
+/* Brilho para service-full-card */
+.service-full-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.service-full-card:hover::before {
+    left: 100%;
+}
+
 .portfolio-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     border: 1px solid rgba(99, 102, 241, 0.5);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
 }
@@ -542,15 +575,20 @@ h1, h2, h3 {
 
 .service-full-card {
     background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 16px;
     text-align: center;
-    transition: var(--transition);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .service-full-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-10px);
+    border: 1px solid rgba(99, 102, 241, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
 }
 
 .service-icon i {
