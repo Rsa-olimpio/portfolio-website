@@ -273,9 +273,9 @@ h1, h2, h3 {
 }
 
 .service-card:hover {
-    transform: translateY(-10px); scale(1.02);
-    border: 1px solid rgba(99, 102, 241, 0.5);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
+    transform: translateY(-10px) scale(1.05) !important;
+    border: 1px solid rgba(99, 102, 241, 0.5) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3) !important;
 }
 
 .service-card i {
@@ -505,9 +505,9 @@ h1, h2, h3 {
 }
 
 .portfolio-card:hover {
-    transform: translateY(-10px);
-    border: 1px solid rgba(99, 102, 241, 0.5);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
+    transform: translateY(-10px) scale(1.05) !important;
+    border: 1px solid rgba(99, 102, 241, 0.5) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3) !important;
 }
 
 .card-image {
@@ -586,9 +586,9 @@ h1, h2, h3 {
 }
 
 .service-full-card:hover {
-    transform: translateY(-10px);
-    border: 1px solid rgba(99, 102, 241, 0.5);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
+    transform: translateY(-10px) scale(1.05) !important;
+    border: 1px solid rgba(99, 102, 241, 0.5) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3) !important;
 }
 
 .service-icon i {
