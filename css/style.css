@@ -1,6 +1,4 @@
-/* ============================================
-   VARIÁVEIS E RESET
-   ============================================ */
+/* VARIÁVEIS E RESET */
 :root {
     --primary: #6366f1;
     --primary-dark: #4f46e5;
@@ -26,7 +24,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--darker);
+    background: linear-gradient(135deg, #0a0a0a, #1a0b2e, #0a0a0a);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
     color: var(--light);
     line-height: 1.6;
     overflow-x: hidden;
@@ -38,9 +38,7 @@ body {
     padding: 0 20px;
 }
 
-/* ============================================
-   TIPOGRAFIA
-   ============================================ */
+/* TIPOGRAFIA  */
 h1, h2, h3 {
     font-weight: 700;
     line-height: 1.2;
@@ -72,9 +70,7 @@ h1, h2, h3 {
     font-size: 2.2rem;
 }
 
-/* ============================================
-   NAVBAR
-   ============================================ */
+/* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
@@ -140,9 +136,7 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
+/* HERO SECTION */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -241,9 +235,7 @@ h1, h2, h3 {
     50% { transform: translateY(-20px); }
 }
 
-/* ============================================
-   SERVIÇOS PREVIEW
-   ============================================ */
+/* SERVIÇOS PREVIEW */
 .services-preview {
     padding: 80px 0;
 }
@@ -256,17 +248,34 @@ h1, h2, h3 {
 
 .service-card {
     background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 16px;
     text-align: center;
-    transition: var(--transition);
-    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.service-card:hover::before {
+    left: 100%; 
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: var(--shadow);
+    border: 1px solid rgba(99, 102, 241, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
 }
 
 .service-card i {
@@ -286,9 +295,8 @@ h1, h2, h3 {
     color: var(--gray);
 }
 
-/* ============================================
-   CTA SECTION
-   ============================================ */
+/* CTA SECTION */
+
 .cta {
     background: var(--gradient);
     padding: 60px 0;
@@ -312,9 +320,8 @@ h1, h2, h3 {
     color: var(--primary);
 }
 
-/* ============================================
-   PAGE HEADER
-   ============================================ */
+/* PAGE HEADER */
+
 .page-header {
     padding: 150px 0 60px;
     text-align: center;
@@ -326,9 +333,8 @@ h1, h2, h3 {
     margin-bottom: 15px;
 }
 
-/* ============================================
-   ABOUT PAGE
-   ============================================ */
+/* ABOUT PAGE */
+
 .about-section {
     padding: 60px 0;
 }
@@ -383,9 +389,8 @@ h1, h2, h3 {
     color: var(--primary);
 }
 
-/* ============================================
-   SKILLS SECTION
-   ============================================ */
+/* SKILLS SECTION */
+
 .skills-section {
     padding: 60px 0;
     background: rgba(255, 255, 255, 0.02);
@@ -421,9 +426,8 @@ h1, h2, h3 {
     transition: width 1s ease;
 }
 
-/* ============================================
-   PORTFOLIO PAGE
-   ============================================ */
+/* PORTFOLIO PAGE */
+
 .portfolio-section {
     padding: 60px 0;
 }
@@ -459,15 +463,18 @@ h1, h2, h3 {
 
 .portfolio-card {
     background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     overflow: hidden;
-    transition: var(--transition);
+    transition: all 0.4s ease;
     position: relative;
 }
 
 .portfolio-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow);
+    border: 1px solid rgba(99, 102, 241, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(99, 102, 241, 0.3);
 }
 
 .card-image {
@@ -521,9 +528,8 @@ h1, h2, h3 {
     opacity: 1;
 }
 
-/* ============================================
-   SERVICES FULL PAGE
-   ============================================ */
+/* SERVICES FULL PAGE */
+
 .services-full {
     padding: 60px 0;
 }
@@ -586,9 +592,8 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
-/* ============================================
-   FAQ SECTION
-   ============================================ */
+/* FAQ SECTION */
+
 .faq-section {
     padding: 60px 0;
     background: rgba(255, 255, 255, 0.02);
@@ -640,9 +645,7 @@ h1, h2, h3 {
     padding: 0 20px 20px;
 }
 
-/* ============================================
-   CONTACT PAGE
-   ============================================ */
+/* CONTACT PAGE */
 .contact-section {
     padding: 60px 0;
 }
@@ -740,6 +743,7 @@ h1, h2, h3 {
 }
 
 /* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -794,6 +798,7 @@ h1, h2, h3 {
 }
 
 /* Loading Spinner */
+
 .loading {
     position: relative;
     opacity: 0.7;
@@ -819,9 +824,8 @@ h1, h2, h3 {
     to { transform: rotate(360deg); }
 }
 
-/* ============================================
-   BACK TO TOP BUTTON
-   ============================================ */
+/* BACK TO TOP BUTTON */
+
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -848,9 +852,7 @@ h1, h2, h3 {
     display: flex;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* FOOTER */
 footer {
     background: rgba(0, 0, 0, 0.5);
     padding: 50px 0 20px;
@@ -925,9 +927,7 @@ footer {
     font-size: 0.85rem;
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -1025,4 +1025,29 @@ footer {
     background-color: #128C7E;
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+    /* EFEITO PARA OS CARDS */
+
+.service-card, .portfolio-card, .service-full-card, .info-item {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.service-card, .portfolio-card, .service-full-card, .info-item {
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* BACKGROUND ANIMADO */
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
