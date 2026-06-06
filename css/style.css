@@ -1018,6 +1018,27 @@ footer {
     .page-header h1 {
         font-size: 2.2rem;
     }
+
+    .navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+    .theme-toggle {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .menu-toggle {
+        order: 3;
+        margin-left: 10px;
+    }
+
+    .nav-menu {
+        order: 4;
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1088,4 +1109,80 @@ footer {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* BOTÃO DE TEMA (CLARO/ESCURO) */
+
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--light);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.theme-toggle:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+/* TEMA CLARO */
+body.light-theme {
+    --light: #1a1a2e;
+    --dark: #f8fafc;
+    --darker: #ffffff;
+    --gray: #4a5568;
+    background: linear-gradient(135deg, #f5f7fa, #e4e7f0);
+}
+
+body.light-theme .navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .service-card,
+body.light-theme .portfolio-card,
+body.light-theme .service-full-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .service-card p,
+body.light-theme .portfolio-card p {
+    color: #4a5568;
+}
+
+body.light-theme .footer-info p,
+body.light-theme .footer-links a {
+    color: #4a5568;
+}
+
+body.light-theme .footer-links a:hover {
+    color: var(--primary);
+}
+
+body.light-theme .contact-form {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+    background: rgba(0, 0, 0, 0.05);
+    color: #1a1a2e;
+}
+
+body.light-theme .info-item p {
+    color: #4a5568;
+}
+
+body.light-theme .faq-item {
+    background: rgba(0, 0, 0, 0.05);
 }

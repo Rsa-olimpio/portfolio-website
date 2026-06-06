@@ -4,9 +4,7 @@
  * back to top, typewriter effect, animação de skills, loading spinner e mais
  */
 
-// ============================================
 // 1. MENU MOBILE
-// ============================================
 
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
@@ -33,9 +31,7 @@ if (menuToggle && navMenu) {
     });
 }
 
-// ============================================
 // 2. BACK TO TOP BUTTON
-// ============================================
 
 const backToTop = document.getElementById('backToTop');
 
@@ -56,9 +52,7 @@ if (backToTop) {
     });
 }
 
-// ============================================
 // 3. TYPEWRITER EFFECT
-// ============================================
 
 const typewriterElement = document.getElementById('typewriter');
 if (typewriterElement) {
@@ -76,9 +70,7 @@ if (typewriterElement) {
     typeWriter();
 }
 
-// ============================================
 // 4. ANIMAÇÃO DAS SKILL BARS
-// ============================================
 
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
@@ -99,9 +91,7 @@ function animateSkillBars() {
 }
 animateSkillBars();
 
-// ============================================
 // 5. FILTRO DO PORTFÓLIO
-// ============================================
 
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioCards = document.querySelectorAll('.portfolio-card');
@@ -133,9 +123,7 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-// ============================================
 // 6. FAQ ACCORDION
-// ============================================
 
 const faqItems = document.querySelectorAll('.faq-item');
 
@@ -148,9 +136,7 @@ faqItems.forEach(item => {
     }
 });
 
-// ============================================
 // 7. VALIDAÇÃO DO FORMULÁRIO (DESATIVADA PARA FORMSUBMIT)
-// ============================================
 
 function validateForm() {
     let isValid = true;
@@ -186,9 +172,7 @@ function clearErrors() {
     document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
 }
 
-// ============================================
 // 8. MÁSCARA DE TELEFONE
-// ============================================
 
 const telefoneInput = document.getElementById('telefone');
 if (telefoneInput) {
@@ -208,9 +192,7 @@ if (telefoneInput) {
     });
 }
 
-// ============================================
 // 9. VALIDAÇÃO EM TEMPO REAL
-// ============================================
 
 const formInputs = ['nome', 'email', 'telefone', 'assunto', 'mensagem'];
 formInputs.forEach(inputId => {
@@ -222,9 +204,7 @@ formInputs.forEach(inputId => {
     }
 });
 
-// ============================================
 // 10. NAVBAR ATIVAÇÃO POR SCROLL
-// ============================================
 
 function setActiveNavOnScroll() {
     const sections = document.querySelectorAll('section');
@@ -255,48 +235,29 @@ function setActiveNavOnScroll() {
 }
 setActiveNavOnScroll();
 
-// ============================================
 // 11. ANIMAÇÃO REVEAL ON SCROLL (CARDS)
-// ============================================
-// ============================================
-// 11. ANIMAÇÃO REVEAL ON SCROLL (CARDS)
-// ============================================
-
 function revealOnScroll() {
-    // Seleciona todos os elementos que terão animação
     const elements = document.querySelectorAll('.service-card, .portfolio-card, .service-full-card, .info-item');
     
-    // Se não encontrar elementos, sai da função
     if (elements.length === 0) return;
     
-    // Cria o observador que detecta quando o elemento entra na tela
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // Quando o elemento aparece na tela
             if (entry.isIntersecting) {
-                // Aplica os estilos finais (visível, posição normal, tamanho normal)
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0) scale(1) rotateX(0)';
-                // Para de observar este elemento (só anima uma vez)
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 }); // 10% do elemento visível já ativa
     
-    // Para cada elemento, aplica o estado inicial e começa a observar
     elements.forEach(el => {
-        // PASSO 1: Estado inicial (invisível)
         el.style.opacity = '0';
         
-        // PASSO 2: Começa deslocado para baixo (60px)
-        // PASSO 3: Começa com zoom reduzido (90%)
-        // PASSO 4: Começa com rotação 3D sutil
         el.style.transform = 'translateY(60px) scale(0.9) rotateX(10deg)';
         
-        // Transição suave com duração de 0.8 segundos
         el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         
-        // Começa a observar este elemento
         observer.observe(el);
     });
 }
@@ -323,8 +284,43 @@ portfolioCardsHover.forEach(card => {
     });
 });
 
-// ============================================
-// 13. CONFIRMAÇÃO DE CARREGAMENTO
-// ============================================
+// MODO CLARO/ESCURO (DARK/LIGHT MODE)
 
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
+
+// Verificar preferência salva no localStorage
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+    if (themeIcon) {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+}
+
+// Função para alternar tema
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        
+        // Salvar preferência no localStorage
+        if (document.body.classList.contains('light-theme')) {
+            localStorage.setItem('theme', 'light');
+            if (themeIcon) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+        } else {
+            localStorage.setItem('theme', 'dark');
+            if (themeIcon) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+    });
+}
+
+// 13. CONFIRMAÇÃO DE CARREGAMENTO
 console.log('✅ Website carregado com sucesso! Todos os efeitos interativos estão ativos.');
